@@ -3,12 +3,12 @@ const mongoURI ="mongodb+srv://bakarbro123:k8HaDkxr4xxAoLqe@cluster0.ckmcwuj.mon
 
 const mongodb = async () => {
   try {
-    await mongoose.connect(mongoURI,{ useNewUrlParser: true, useUnifiedTopology: true });
+    await mongoose.connect(mongoURI);
     console.log("connect to mongodb");
 
     const fetched_data = await mongoose.connection.db.collection("shop_items");
     const data = await fetched_data.find({}).toArray();
-    console.log(data);
+    // console.log(data);
 
     // console.log(fetched_data);
   } catch (err) {

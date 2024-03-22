@@ -13,6 +13,8 @@ import {
 
 import Home  from "./pages/Home"
 import About from './pages/About';
+import Signup from './pages/Signup';
+import Login from './pages/Login';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +22,8 @@ const router = createBrowserRouter(
     <Route path="/" element={<Home />}>
     </Route>
       <Route path="about" element={<About />} />
+      <Route path="createuser" element={<Signup />} />
+      <Route path="login" element={<Login />} />
       </>
   )
 );
